@@ -3,41 +3,35 @@
 
 #items {
     @include mixin.flex;
-    height: 50vh;
+    height: 60vh;
 }
 
 .items_grid_container {
-    // width: 60%;cd ../
+    width: 60%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
 
     a:hover {
         color: blue;
         text-decoration: underline;
     }
 
-    p {
-        width: 90%;
-    }
-
     .item_card {
-        @include mixin.flex (row, center, center);
+        @include mixin.flex (row, center, flex-start);
         width: 100%;
-        gap: 20px;
+        margin-top: 5rem;
+        gap: 2rem;
 
         .img_abs {
             width: 20%;
             height: 100%;
-            position: relative;
-
 
             img {
-                position: absolute;
-                height: 100px;
-                left: 0;
-                top: 25%;
+                width: 5rem;
+                height: auto;
                 object-fit: cover;
 
             } 
@@ -45,8 +39,8 @@
 
         .item_content {
             @include mixin.flex(column, center, flex-start);
-            width: 80%;
-            gap: 5px;
+            width: 60%;
+            gap: .7rem;
         }
     }
 }
