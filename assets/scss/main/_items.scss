@@ -7,11 +7,48 @@
 }
 
 .items_grid_container {
-    width: 70%;
+    // width: 60%;cd ../
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+
+    a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    p {
+        width: 90%;
+    }
+
+    .item_card {
+        @include mixin.flex (row, center, center);
+        width: 100%;
+        gap: 20px;
+
+        .img_abs {
+            width: 20%;
+            height: 100%;
+            position: relative;
+
+
+            img {
+                position: absolute;
+                height: 100px;
+                left: 0;
+                top: 25%;
+                object-fit: cover;
+
+            } 
+        }
+
+        .item_content {
+            @include mixin.flex(column, center, flex-start);
+            width: 80%;
+            gap: 5px;
+        }
+    }
 }
 
 
