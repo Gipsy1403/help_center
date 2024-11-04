@@ -1,0 +1,53 @@
+@use "../abstract/variable" as var;
+@use "../abstract/mixin";
+
+
+footer {
+    @include mixin.flex(row, center, flex-start);
+    background-color: black;
+    color: white;
+    height: 30vh;
+    font-size: 1.2rem;
+
+    a {
+        color: white;
+        display: block;
+        cursor: pointer;
+
+        &:hover:not(:last-child) {
+            transform: scale(1.1);
+            color: grey;
+        }
+    }
+
+    span {
+        display: block;
+    }
+
+    .footer_container {
+        @include mixin.flex(row, flex-start, flex-start);
+        width: 90%;
+        padding: 50px;
+
+        div {
+            @include mixin.flex (column, center, flex-start);
+            width: 30%;
+            height: 100%;
+            gap: 15px;
+
+            &:last-child {
+                    font-size: 1rem;
+                    margin-top: 25px;
+            }
+
+            li {
+                padding-top: 10px;
+            }
+        }
+
+        .copyright {
+            align-self: flex-end;
+            font-size: 1.5rem;
+        }
+    }
+}

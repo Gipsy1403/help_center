@@ -1,0 +1,22 @@
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto/Roboto-Black.ttf);
+    font-weight: 800;
+}
+
+
+body {
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1720px;
+}

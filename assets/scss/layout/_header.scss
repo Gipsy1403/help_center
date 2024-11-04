@@ -1,0 +1,55 @@
+@use "../abstract/variable" as var;
+@use "../abstract/mixin";
+
+header {
+    background-color: black;
+    @include mixin.flex;
+    height: 5vh;
+    font-size: 1.2rem;
+
+    nav {
+        width: 100%;
+        @include mixin.flex(row, space-between, center);
+        color: white;
+
+        a {
+            color: white;
+            transition: .3s ease;
+            display: block;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        ul {
+            padding-left: 10%;
+            @include mixin.flex;
+            gap: 10px;
+
+            li:first-child {
+                border-right: 1px solid white;
+                padding-right: 10px;
+            }
+            
+        }
+
+        .login_wrapper {
+            padding-right: 10%;
+            @include mixin.flex;
+            gap: 20px;
+            
+            a {
+                padding: 10px 20px;
+                border: 1px solid grey;
+                border-radius: 10px;
+            }
+
+            a:last-child {
+                background-color: #1892DC;
+                border-color: #1892DC;
+            }
+        }
+    }
+}
