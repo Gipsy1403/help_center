@@ -1,0 +1,18 @@
+@use "../abstract/variable" as var;
+@use "../abstract/mixin";
+
+#items {
+    @include mixin.flex;
+    height: 50vh;
+}
+
+.items_grid_container {
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+

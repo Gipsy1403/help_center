@@ -188,4 +188,20 @@ body {
   max-width: 1720px;
 }
 
+#items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.items_grid_container {
+  width: 70%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
 /*# sourceMappingURL=style.css.map */
