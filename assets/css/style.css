@@ -4,7 +4,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  height: 80px;
   font-size: 1.2rem;
 }
 header nav {
@@ -186,6 +186,33 @@ body {
 
 .container {
   max-width: 1720px;
+}
+
+@media screen and (max-width: 1000px) {
+  header nav ul {
+    padding-left: 5%;
+  }
+  header nav .login_wrapper {
+    padding-right: 5%;
+  }
+}
+@media screen and (max-width: 550px) {
+  header {
+    height: 10vh;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  header nav ul {
+    padding-left: 0%;
+  }
+  header nav .logo_wrapper {
+    padding-right: 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
 header {
     background-color: black;
     @include mixin.flex;
-    height: 5vh;
+    height: 80px;
     font-size: 1.2rem;
 
     nav {

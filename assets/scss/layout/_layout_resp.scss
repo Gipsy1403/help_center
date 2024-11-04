@@ -1,0 +1,38 @@
+@use "../abstract/variable" as var;
+@use "../abstract/mixin";
+
+
+@media screen and (max-width: 1000px) {
+    
+    header {
+        nav {
+
+            ul {
+                padding-left: 5%;
+            }
+
+            .login_wrapper {
+                padding-right: 5%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        height: 10vh;
+
+        nav {
+        @include mixin.flex(column, center, center);
+        gap: 1rem;
+
+        ul {
+            padding-left: 0%;
+        }
+
+        .logo_wrapper {
+            padding-right: 0%;
+        }
+        }
+    }
+}
